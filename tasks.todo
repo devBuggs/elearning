@@ -1,1 +1,16 @@
+# Credentials
+username : @ironman
+password : firefly@
+
+
+
+
 project skeleton
+
++ server
+-----+ server
+-----+ webapp
+-----+ adminapp
+-----+ static (resource)
+-----+ media (resource)
+-----+ templates (resource)
