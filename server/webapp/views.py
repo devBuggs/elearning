@@ -29,19 +29,30 @@ def course_view(request):
     return render(request, 'webapp/courses.html', context)
 
 # Global Errors
-def custom_page_not_found_view(request, exception):
-    context['segment'] = '404'
-    return render(request, "webapp/error.html", context)
-
-def custom_error_view(request, exception=None):
-    context['segment'] = '500'
+def custom_bad_request_view(request, exception=None):
+    error = {
+        "segment": "400"
+    }
+    context.update(error)
     return render(request, "webapp/error.html", context)
 
 def custom_permission_denied_view(request, exception=None):
-    context['segment'] = '403'
+    error = {
+        "segment": "403"
+    }
+    context.update(error)
     return render(request, "webapp/error.html", context)
 
-def custom_bad_request_view(request, exception=None):
-    context['segment'] = '400'
+def custom_page_not_found_view(request, exception):
+    error = {
+        "segment": "404"
+    }
+    context.update(error)
     return render(request, "webapp/error.html", context)
 
+def custom_error_view(request, exception=None):
+    error = {
+        "segment": "500"
+    }
+    context.update(error)
+    return render(request, "webapp/error.html", context)
