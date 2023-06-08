@@ -30,8 +30,8 @@ DEBUG = True
 #     CSRF_COOKIE_SECURE = True
 #     SESSION_COOKIE_SECURE = True
 
-if DEBUG == False:
-    SECURE_SSL_REDIRECT = True
+# if DEBUG == False:
+#     SECURE_SSL_REDIRECT = True
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 
