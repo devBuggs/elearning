@@ -25,12 +25,23 @@ def privacy_policy_view(request):
 def terms_conditions_view(request):
     return render(request, 'webapp/terms-conditions.html', context)
 
-
-
-
-
-
-
-
 def course_view(request):
     return render(request, 'webapp/courses.html', context)
+
+# Global Errors
+def custom_page_not_found_view(request, exception):
+    context['segment'] = '404'
+    return render(request, "webapp/error.html", context)
+
+def custom_error_view(request, exception=None):
+    context['segment'] = '500'
+    return render(request, "webapp/error.html", context)
+
+def custom_permission_denied_view(request, exception=None):
+    context['segment'] = '403'
+    return render(request, "webapp/error.html", context)
+
+def custom_bad_request_view(request, exception=None):
+    context['segment'] = '400'
+    return render(request, "webapp/error.html", context)
+
