@@ -12,5 +12,6 @@ urlpatterns = [
     path('privacy-policy', views.privacy_policy_view, name='privacy-policy'),
     path('terms-and-conditions', views.terms_conditions_view, name='terms-conditions'),
     path('blog', views.blog_view, name='blog'),
-
+    path('courses', views.course_view, name='courses'),
+    path('team', views.team_view, name='team'),
 ]
