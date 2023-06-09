@@ -28,6 +28,22 @@ def terms_conditions_view(request):
 def course_view(request):
     return render(request, 'webapp/courses.html', context)
 
+def blog_view(request):
+    return render(request, 'webapp/blog-index.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Global Errors
 def custom_bad_request_view(request, exception=None):
     error = {
