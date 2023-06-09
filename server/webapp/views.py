@@ -31,7 +31,8 @@ def course_view(request):
 def blog_view(request):
     return render(request, 'webapp/blog-index.html', context)
 
-
+def team_view(request):
+    return render(request, 'webapp/team.html', context)
 
 
 
